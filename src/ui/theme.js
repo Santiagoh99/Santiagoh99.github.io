@@ -4,6 +4,7 @@ import { esES } from '@mui/material/locale'
 export const theme =
     createTheme({
         palette: {
+            mode: 'dark',
             primary: {
                 light: '#80d6ff',
                 main: '#42a5f5',

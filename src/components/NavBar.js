@@ -5,8 +5,8 @@ import { useNavigate } from 'react-router-dom'
 
 const styles = {
     toolBar: {
-        backgroundColor: 'white',
-        color: 'black',
+        backgroundColor: 'black',
+        color: 'white',
         paddingLeft: 6,
         paddingRight: 6,
     },
