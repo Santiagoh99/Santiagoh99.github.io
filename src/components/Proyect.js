@@ -25,33 +25,31 @@ const images = [
 export default function Proyect() {
 
     return (
-        <>
-            <Grid container spacing={4}>
-                {images.map((image) => (
-                    <Grid item xs={12} md={4} key={image.url}>
-                        <Card sx={styles.root} raised={true}  key={image.url} elevation={3}>
-                            <CardActionArea>
-                                <CardMedia
-                                    component="img"
-                                    image={image.url}
-                                />
-                                <CardContent>
-                                    <Typography variant="h5">
-                                        {image.title}
-                                    </Typography>
-                                    <Typography variant="subtitle1" display="block" noWrap>
-                                        subtitulo
-                                    </Typography>
-                                    <Divider />
-                                    <Typography variant="body2">
-                                        desc
-                                    </Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
-                    </Grid>
-                ))}
-            </Grid>
-        </>
+        <Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
+            {images.map((image) => (
+                <Grid item xs={4} key={image.url}>
+                    <Card style={styles.root} raised={true} key={image.url} elevation={3}>
+                        <CardActionArea>
+                            <CardMedia
+                                component="img"
+                                image={image.url}
+                            />
+                            <CardContent>
+                                <Typography variant="h5" align='center'>
+                                    {image.title}
+                                </Typography>
+                                <Typography variant="subtitle1" display="block" noWrap align='center'>
+                                    subtitulo
+                                </Typography>
+                                <Divider />
+                                <Typography variant="body2" align='center'>
+                                    desc
+                                </Typography>
+                            </CardContent>
+                        </CardActionArea>
+                    </Card>
+                </Grid>
+            ))}
+        </Grid>
     )
 }
