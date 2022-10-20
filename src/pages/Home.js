@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
-import { Grid, Divider, Button, Dialog, DialogTitle } from '@mui/material'
-
+import Proyect from "../components/Proyect"
+import { Grid, Divider } from '@mui/material'
 
 export default function Home() {
 
-    const [open, setOpen] = useState(false)
-
     return (
         <>
-            hola
+            <Divider style={{ margin: '1em' }}>Proyectos</Divider>
+            <Proyect />
         </>
     )
 }
