@@ -39,7 +39,7 @@ export default function Proyect() {
     return (
         <Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
             {images.map((image) => (
-                <Grid item xs={4} key={image.url}>
+                <Grid item xs='auto' key={image.url}>
                     <Card style={styles.root} raised={true} key={image.url} elevation={3}>
                         <CardActionArea>
                             <CardMedia

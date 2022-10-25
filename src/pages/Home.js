@@ -4,6 +4,18 @@ import Contacto from "../components/Contacto"
 import { Grid, Divider,Typography,Button} from '@mui/material'
 import logo from '../img/Imagen1.jpg'
 
+const images = [
+    { id:'1',url: 'https://img.icons8.com/color/96/000000/javascript--v1.png'},
+    { id:'2',url: 'https://img.icons8.com/color/98/000000/microsoft-sql-server.png'},
+    { id:'3',url: 'https://img.icons8.com/fluency/98/000000/github.png'},
+    { id:'4',url: 'https://img.icons8.com/color/98/000000/html-5--v1.png'},
+    { id:'5',url: 'https://img.icons8.com/color/98/000000/python--v1.png'},
+    { id:'6',url: 'https://img.icons8.com/color/98/000000/css3.png'},
+    { id:'7',url: 'https://img.icons8.com/color/98/000000/nodejs.png'},
+    { id:'8',url: 'https://img.icons8.com/ios/98/000000/react-native--v1.png'},
+    { id:'9',url: 'https://img.icons8.com/fluency/98/000000/visual-studio-2019.png'},
+]
+
 export default function Home() {
 
     return (
@@ -19,6 +31,13 @@ export default function Home() {
                 <Button>
                     Descargar
                 </Button>
+                    <Grid container spacing={2} direction="row" justifyContent="center" alignItems="center">
+                    {images.map((image) => (
+                     <Grid item xs='auto' key={image.id}>
+                       <img src={image.url} alt='logo'/>   
+                     </Grid>
+                    ))}
+                    </Grid>
             </Grid>
             <Divider style={{ margin: '2em' }}>Proyectos</Divider>
             <Proyect />
