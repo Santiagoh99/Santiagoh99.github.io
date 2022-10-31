@@ -18,19 +18,31 @@ const images = [
         url: '/static/images/buttons/burgers.jpg',
         title: 'KOSIUKO (TEP)',
         subtitle:'Produccion',
-        desc:'Pagina de Produccion de corte de la marca Kosiuko para integrar en Microsoft GP 2018, realizado con react/node , con backend en asp.net core y SQL server',
+        desc:'Desarrollo de Produccion de corte de la marca Kosiuko para integrar en Microsoft GP 2018, realizado con react/node , con backend en asp.net core y SQL server',
     },
     {
         url: '/static/images/buttons/camera.jpg',
         title: 'NONSTOP',
         subtitle:'Carga cliente',
-        desc:'Pagina de carga de clientes para la productora Nonstop, realizado con react/node , con backend en asp.net core y SQL server',   
+        desc:'Desarrollo de carga de clientes para la productora Nonstop, realizado con react/node , con backend en asp.net core y SQL server',   
     },
     {
         url: '/static/images/buttons/camera.jpg',
         title: 'ALTIORA/IMPLEMENTACION INDUSTRIALES',
-        subtitle:'Web',
+        subtitle:'Pagina Web',
         desc:'Pagina principal de las consultoras Altiora y Implementaciones Industriales, realizado en HTML-CSS-Javascript',   
+    }, 
+    {
+        url: '/static/images/buttons/camera.jpg',
+        title: 'FARMAGRAM',
+        subtitle:'Produccion',
+        desc:'Desarrollo de Produccion de fallas de la empresa FarmaGram para integrar en Microsoft GP 2016, realizado con react/node , con backend en asp.net core y SQL server',   
+    }, 
+    {
+        url: '/static/images/buttons/camera.jpg',
+        title: 'FARMAGRAM(Facturacion)',
+        subtitle:'Produccion',
+        desc:'Desarrollo de produccion para la facturacion de la empresa FarmaGram para integrar en Microsoft GP 2016, realizado con react/node , con backend en asp.net core y SQL server',   
     }, 
 ];
 
