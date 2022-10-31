@@ -1,9 +1,15 @@
-import React from 'react'
-import { Grid, Card, CardMedia, CardActionArea, CardContent, Typography, Divider } from '@mui/material'
-
+import React, { useState } from 'react'
+import { Grid, Card, CardMedia, CardActionArea, CardContent, Typography, Divider,DialogContent,Dialog,Toolbar,DialogActions,Button,IconButton } from '@mui/material'
+import CloseIcon from '@mui/icons-material/Close'
 const styles = {
     root: {
         maxWidth: 345,
+    },
+    closeButton: {
+        position: 'absolute',
+        right: 10,
+        top: 1,
+        color: 'inherit',
     },
 }
 
@@ -48,12 +54,15 @@ const images = [
 
 export default function Proyect() {
 
+    const [open,setOpen] = useState(false);
+
     return (
         <Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
             {images.map((image) => (
+                <>
                 <Grid item xs='auto' key={image.url}>
                     <Card style={styles.root} raised={true} key={image.url} elevation={3}>
-                        <CardActionArea>
+                        <CardActionArea onClick={() => setOpen(true)}>
                             <CardMedia component="img" image={image.url}/>
                             <CardContent>
                                 <Typography variant="h5" align='center'>{image.title}</Typography>
@@ -66,6 +75,25 @@ export default function Proyect() {
                         </CardActionArea>
                     </Card>
                 </Grid>
+                <Dialog maxWidth='md' open={open} onClose={() => setOpen(false)}>
+            <Toolbar variant='dense' >
+                <IconButton
+                    style={styles.closeButton}
+                    onClick={() => setOpen(false)}
+                    size='large'>
+                    <CloseIcon />
+                </IconButton>
+            </Toolbar>
+            <Divider />
+            <DialogContent>
+            </DialogContent>
+            <DialogActions>
+                <Button onClick={() => setOpen(false)} variant='contained' color='primary' disableElevation fullWidth>
+                    Cerrar
+                </Button>
+            </DialogActions>
+        </Dialog>
+                </>
             ))}
         </Grid>
     )
