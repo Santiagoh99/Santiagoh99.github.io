@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-import { Grid, Card, CardMedia, CardActionArea, CardContent, Typography, Divider, } from '@mui/material'
+import React from 'react'
+import { Grid, Card, CardMedia, CardActionArea, CardContent, Typography, Divider } from '@mui/material'
 
 const styles = {
     root: {
@@ -54,21 +54,14 @@ export default function Proyect() {
                 <Grid item xs='auto' key={image.url}>
                     <Card style={styles.root} raised={true} key={image.url} elevation={3}>
                         <CardActionArea>
-                            <CardMedia
-                                component="img"
-                                image={image.url}
-                            />
+                            <CardMedia component="img" image={image.url}/>
                             <CardContent>
-                                <Typography variant="h5" align='center'>
-                                    {image.title}
-                                </Typography>
+                                <Typography variant="h5" align='center'>{image.title}</Typography>
                                 <Typography variant="subtitle1" display="block" noWrap align='center'>
                                     {image.subtitle}
                                 </Typography>
                                 <Divider />
-                                <Typography variant="body2" align='center'>
-                                {image.desc}
-                                </Typography>
+                                <Typography variant="body2" align='center'>{image.desc}</Typography>
                             </CardContent>
                         </CardActionArea>
                     </Card>

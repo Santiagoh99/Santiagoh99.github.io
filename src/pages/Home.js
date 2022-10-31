@@ -31,6 +31,7 @@ export default function Home() {
                 <Button>
                     Descargar
                 </Button>
+                <Divider style={{ margin: '1em' }}/>
                     <Grid container spacing={2} direction="row" justifyContent="center" alignItems="center">
                     {images.map((image) => (
                      <Grid item xs='auto' key={image.id}>
