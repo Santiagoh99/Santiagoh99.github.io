@@ -1,17 +1,10 @@
 import React, { useState } from 'react'
-import { Grid, Card, CardMedia, CardActionArea, CardContent, Typography, Divider, DialogContent, Dialog, Toolbar, DialogActions, Button, IconButton } from '@mui/material'
-import CloseIcon from '@mui/icons-material/Close'
+import { Grid, Card, CardMedia, CardActionArea, CardContent, Typography, Divider, DialogContent, Dialog, DialogActions, Button } from '@mui/material'
 
 const styles = {
     root: {
         maxWidth: 345,
-    },
-    closeButton: {
-        position: 'absolute',
-        right: 10,
-        top: 1,
-        color: 'inherit',
-    },
+    }
 }
 
 const images = [
@@ -52,13 +45,13 @@ export default function Proyect() {
     const [open, setOpen] = useState(false);
 
     return (
-        <Grid container spacing={3} direction="row" justifyContent="center" alignItems="center">
+        <Grid container justifyContent="center"  alignItems="center">
             {images.map((image) => (
                 <>
-                    <Grid item xs='auto' key={image.url}>
-                    <Card style={styles.root} raised={true} key={image.url} elevation={3}>
+                    <Grid item xs={6} key={image.url} align="center">
+                        <Card style={styles.root} raised={true} key={image.url} elevation={1}>
                             <CardActionArea onClick={() => setOpen(true)}>
-                                <CardMedia component="img" image={image.url} height="200"/>
+                                <CardMedia component="img" image={image.url} height="200" />
                                 <CardContent>
                                     <Typography variant="h5" align='center'>{image.title}</Typography>
                                     <Divider />
@@ -68,19 +61,13 @@ export default function Proyect() {
                         </Card>
                     </Grid>
                     <Dialog maxWidth='md' open={open} onClose={() => setOpen(false)}>
-                        <Toolbar variant='dense' >
-                            <IconButton style={styles.closeButton} onClick={() => setOpen(false)} size='large'>
-                                <CloseIcon />
-                            </IconButton>
-                        </Toolbar>
-                        <Divider />
                         <DialogContent>
-                            <video width="750" height="500" controls >
+                            <video width="450" height="400" controls >
                                 <source src={image.video} type="video/mp4" />
                             </video>
                         </DialogContent>
                         <DialogActions>
-                            <Button onClick={() => setOpen(false)} variant='contained' color='primary' disableElevation fullWidth>
+                            <Button onClick={() => setOpen(false)} variant='contained' color='primary' fullWidth>
                                 Cerrar
                             </Button>
                         </DialogActions>
