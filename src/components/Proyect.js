@@ -29,7 +29,7 @@ export default function Proyect() {
         setFilm(item.film)
         setOpen(true)
     }
-
+console.log(film)
     return (
         <Grid container justifyContent="center" alignItems="center">
             {images.map((image) => (
@@ -49,8 +49,7 @@ export default function Proyect() {
             <Dialog maxWidth='md' open={open} onClose={() => setOpen(false)}>
                 <DialogTitle style={styles.titlestyles}>{desc}</DialogTitle>
                 <DialogContent>
-                    <video width="850" height="400" controls >
-                        <source src={film} type="video/mp4" />
+                    <video width="850" height="400" controls src={film} type="video/mp4">
                     </video>
                 </DialogContent>
                 <DialogActions>
