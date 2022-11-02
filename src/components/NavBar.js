@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { AppBar, Toolbar, Box, BottomNavigation, BottomNavigationAction } from '@mui/material'
+import { AppBar, Box, BottomNavigation, BottomNavigationAction } from '@mui/material'
 
 export default function Navbar() {
     const [value, setValue] = useState(3)

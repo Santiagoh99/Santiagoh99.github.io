@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Grid, Typography, DialogContent, Dialog, DialogActions, Button } from '@mui/material'
+import { Grid, Typography, DialogContent, Dialog, DialogActions, Button, DialogTitle } from '@mui/material'
 import { ImageButton, ImageSrc, Image, ImageBackdrop, ImageMarked } from "../components/imageButton"
 import { images } from '../data/image'
 
@@ -21,7 +21,7 @@ export default function Proyect() {
             {images.map((image) => (
                 <>
                     <Grid item xs={4} key={image.title} align="center">
-                        <ImageButton focusRipple key={image.tile} style={{ width: '50%' }}>
+                        <ImageButton focusRipple key={image.tile} style={{ width: '50%' }} onClick={() => setOpen(true)}>
                             <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
                             <ImageBackdrop className="MuiImageBackdrop-root" />
                             <Image>
@@ -33,8 +33,9 @@ export default function Proyect() {
                         </ImageButton>
                     </Grid>
                     <Dialog maxWidth='md' open={open} onClose={() => setOpen(false)}>
+                        <DialogTitle style={{ backgroundColor: '#393939', color: 'white', textAlign: 'center', fontSize: 16 }}>{image.desc}</DialogTitle>
                         <DialogContent>
-                            <video width="450" height="400" controls >
+                            <video width="850" height="400" controls >
                                 <source src={image.video} type="video/mp4" />
                             </video>
                         </DialogContent>
