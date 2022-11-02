@@ -1,64 +1,36 @@
 import React, { useState } from 'react'
-import { Grid, Card, CardMedia, CardActionArea, CardContent, Typography, Divider, DialogContent, Dialog, DialogActions, Button } from '@mui/material'
+import { Grid, Typography, DialogContent, Dialog, DialogActions, Button } from '@mui/material'
+import { ImageButton, ImageSrc, Image, ImageBackdrop, ImageMarked } from "../components/imageButton"
+import { images } from '../data/image'
 
 const styles = {
-    root: {
-        maxWidth: 345,
-    }
+    imagenstyles: {
+        position: 'relative',
+        p: 4,
+        pt: 2,
+        pb: (theme) => `calc(${theme.spacing(1)} + 6px)`
+    },
 }
-
-const images = [
-    {
-        url: require('../img/kosiuko.png'),
-        title: 'KOSIUKO',
-        desc: 'E-commerce de la marca Kosiuko para proveedores mayoristas, realizado con react/node , con backend en asp.net core y SQL server',
-    },
-    {
-        url: require('../img/kosiuko.png'),
-        title: 'KOSIUKO (TEP)',
-        desc: 'Desarrollo de Produccion de corte de la marca Kosiuko para integrar en Microsoft GP 2018, realizado con react/node , con backend en asp.net core y SQL server',
-    },
-    {
-        url: require('../img/kosiuko.png'),
-        title: 'NONSTOP',
-        desc: 'Desarrollo de carga de clientes para la productora Nonstop, realizado con react/node , con backend en asp.net core y SQL server',
-    },
-    {
-        url: require('../img/kosiuko.png'),
-        title: 'ALTIORA/IMPLEMENTACION INDUSTRIALES',
-        desc: 'Pagina principal de las consultoras Altiora y Implementaciones Industriales, realizado en HTML-CSS-Javascript',
-    },
-    {
-        url: require('../img/kosiuko.png'),
-        title: 'FARMAGRAM',
-        desc: 'Desarrollo de Produccion de fallas de la empresa FarmaGram para integrar en Microsoft GP 2016, realizado con react/node , con backend en asp.net core y SQL server',
-    },
-    {
-        url: require('../img/kosiuko.png'),
-        title: 'FARMAGRAM(Facturacion)',
-        desc: 'Desarrollo de produccion para la facturacion de la empresa FarmaGram para integrar en Microsoft GP 2016, realizado con react/node , con backend en asp.net core y SQL server',
-    },
-];
 
 export default function Proyect() {
 
     const [open, setOpen] = useState(false);
 
     return (
-        <Grid container justifyContent="center"  alignItems="center">
+        <Grid container justifyContent="center" alignItems="center">
             {images.map((image) => (
                 <>
-                    <Grid item xs={6} key={image.url} align="center">
-                        <Card style={styles.root} raised={true} key={image.url} elevation={1}>
-                            <CardActionArea onClick={() => setOpen(true)}>
-                                <CardMedia component="img" image={image.url} height="200" />
-                                <CardContent>
-                                    <Typography variant="h5" align='center'>{image.title}</Typography>
-                                    <Divider />
-                                    <Typography variant="body2" align='center'>{image.desc}</Typography>
-                                </CardContent>
-                            </CardActionArea>
-                        </Card>
+                    <Grid item xs={4} key={image.title} align="center">
+                        <ImageButton focusRipple key={image.tile} style={{ width: '50%' }}>
+                            <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
+                            <ImageBackdrop className="MuiImageBackdrop-root" />
+                            <Image>
+                                <Typography component="span" variant="subtitle1" color="inherit" sx={styles.imagenstyles}>
+                                    {image.title}
+                                    <ImageMarked className="MuiImageMarked-root" />
+                                </Typography>
+                            </Image>
+                        </ImageButton>
                     </Grid>
                     <Dialog maxWidth='md' open={open} onClose={() => setOpen(false)}>
                         <DialogContent>

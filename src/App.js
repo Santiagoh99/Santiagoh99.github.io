@@ -24,7 +24,7 @@ const App = () => {
             <Container>
               <NavBar />
             </Container>
-            <Container style={{ padding: "30px 200px",margin:"0px 80px" }}>
+            <Container style={{ padding: "24px" }}>
               <Routes>
                 <Route path={"/"} element={<Home />} />
                 <Route path="/unauthorized" element={<Unauthorized />} />
