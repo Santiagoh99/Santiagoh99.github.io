@@ -12,9 +12,9 @@ const styles = {
     },
     titlestyles: {
         backgroundColor: '#393939',
-         color: 'white',
-          textAlign: 'center',
-           fontSize: 16
+        color: 'white',
+        textAlign: 'center',
+        fontSize: 16
     },
 }
 
@@ -29,11 +29,11 @@ export default function Proyect() {
         setFilm(item.film)
         setOpen(true)
     }
-console.log(film)
+
     return (
         <Grid container justifyContent="center" alignItems="center">
             {images.map((image) => (
-                <Grid item xs={3} key={image.title} align="center" sx={{margin:'5px'}}>
+                <Grid item xs={3} key={image.title} align="center" sx={{ margin: '5px' }}>
                     <ImageButton focusRipple style={{ width: '75%' }} onClick={() => video(image)}>
                         <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
                         <ImageBackdrop className="MuiImageBackdrop-root" />
@@ -49,7 +49,8 @@ console.log(film)
             <Dialog maxWidth='md' open={open} onClose={() => setOpen(false)}>
                 <DialogTitle style={styles.titlestyles}>{desc}</DialogTitle>
                 <DialogContent>
-                    <video width="850" height="400" controls src={film} type="video/mp4">
+                    <video controls width="850" height="400">
+                        <source src={film} type="video/mp4"/>
                     </video>
                 </DialogContent>
                 <DialogActions>
