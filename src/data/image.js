@@ -1,12 +1,12 @@
 export const images = [
     {
-        url: require('../img/kosiuko.png'),
+        url: require('../img/kosiuko.jpg'),
         title: 'KOSIUKO',
         film: '../img/1ksk.mp4',
         desc: 'E-commerce de la marca Kosiuko para proveedores mayoristas, realizado con react/node , con backend en asp.net core y SQL server',
     },
     {
-        url: require('../img/kosiuko.png'),
+        url: require('../img/kosiuko.jpg'),
         title: 'KOSIUKO (TEP)',
         film: '../img/2tep.mp4',
         desc: 'Desarrollo de Produccion de corte de la marca Kosiuko para integrar en Microsoft GP 2018, realizado con react/node , con backend en asp.net core y SQL server',
@@ -18,9 +18,8 @@ export const images = [
         desc: 'Desarrollo de carga de clientes para la productora Nonstop, realizado con react/node , con backend en asp.net core y SQL server',
     },
     {
-        url: require('../img/altiora.png'),
+        url: require('../img/altiora.jpg'),
         title: 'ALTIORA/IMPLEMENTACION INDUSTRIALES',
-
         desc: 'Pagina principal de las consultoras Altiora y Implementaciones Industriales, realizado en HTML-CSS-Javascript',
     },
     {

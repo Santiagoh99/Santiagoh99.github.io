@@ -33,8 +33,8 @@ console.log(film)
     return (
         <Grid container justifyContent="center" alignItems="center">
             {images.map((image) => (
-                <Grid item xs={4} key={image.title} align="center" sx={{margin:'10px'}}>
-                    <ImageButton focusRipple style={{ width: '80%' }} onClick={() => video(image)}>
+                <Grid item xs={3} key={image.title} align="center" sx={{margin:'5px'}}>
+                    <ImageButton focusRipple style={{ width: '75%' }} onClick={() => video(image)}>
                         <ImageSrc style={{ backgroundImage: `url(${image.url})` }} />
                         <ImageBackdrop className="MuiImageBackdrop-root" />
                         <Image>
