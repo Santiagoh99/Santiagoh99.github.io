@@ -56,7 +56,7 @@ export default function Home() {
                     href="https://github.com/Santiagoh99" target='_blank'>
                         <GitHub style={{ fontSize: 30}}/>
                     </IconButton>
-                    </Divider>
+            </Divider>
         </>
     )
 }
