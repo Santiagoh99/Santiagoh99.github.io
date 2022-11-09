@@ -20,13 +20,13 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={esLocale}>
           <CssBaseline />
-          <Router basename="https://santiagoh99.github.io/Portafolio-V2/">
+          <Router >
             <Container>
               <NavBar />
             </Container>
             <Container style={{ padding: "24px" }}>
               <Routes>
-                <Route path={"https://santiagoh99.github.io/Portafolio-V2/"} element={<Home />} />
+                <Route path={"/"} element={<Home />} />
                 <Route path="/unauthorized" element={<Unauthorized />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
