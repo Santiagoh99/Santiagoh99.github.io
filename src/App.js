@@ -26,7 +26,7 @@ const App = () => {
             </Container>
             <Container style={{ padding: "24px" }}>
               <Routes>
-                <Route path={"/"} element={<Home />} />
+                <Route path={"https://santiagoh99.github.io/Portafolio-V2/"} element={<Home />} />
                 <Route path="/unauthorized" element={<Unauthorized />} />
                 <Route path="*" element={<NotFound />} />
               </Routes>
