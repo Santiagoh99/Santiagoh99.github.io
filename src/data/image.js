@@ -14,7 +14,7 @@ export const images = [
     },
     {
         url: require('../img/kosiuko.jpg'),
-        title: 'KOSIUKO (TEP)',
+        title: 'TEP',
         film: tep,
         desc: 'Desarrollo de Produccion de corte de la marca Kosiuko para integrar en Microsoft GP 2018, realizado con react/node , con backend en asp.net core y SQL server',
     },
@@ -26,18 +26,18 @@ export const images = [
     },
     {
         url: require('../img/altiora.jpg'),
-        title: 'ALTIORA/IMPLEMENTACION INDUSTRIALES',
+        title: 'ALTIORA',
         desc: 'Pagina principal de las consultoras Altiora y Implementaciones Industriales, realizado en HTML-CSS-Javascript',
     },
     {
         url: require('../img/farmaGram.png'),
-        title: 'FARMAGRAM',
+        title: 'TINTA',
         film: tinte,
         desc: 'Desarrollo de Produccion de fallas de la empresa FarmaGram para integrar en Microsoft GP 2016, realizado con react/node , con backend en asp.net core y SQL server',
     },
     {
         url: require('../img/farmaGram.png'),
-        title: 'FARMAGRAM(Facturacion)',
+        title: 'FARMAGRAM',
         film: farmaGram,
         desc: 'Desarrollo de produccion para la facturacion de la empresa FarmaGram para integrar en Microsoft GP 2016, realizado con react/node , con backend en asp.net core y SQL server',
     },
