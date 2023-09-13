@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Grid, Typography, DialogContent, Dialog, DialogActions, Button, DialogTitle, Divider } from '@mui/material'
-import { ImageButton, ImageSrc, Image, ImageBackdrop, ImageMarked } from "../components/imageButton"
+import { ImageButton, ImageSrc, Image, ImageBackdrop, ImageMarked } from "../components/ImageButton"
 import { images } from '../data/image'
 
 const styles = {
