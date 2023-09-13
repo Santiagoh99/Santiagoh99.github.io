@@ -9,8 +9,6 @@ import { theme } from "./ui/theme"
 import CssBaseline from "@mui/material/CssBaseline"
 import "./css/App.css"
 import Home from './pages/Home'
-import NotFound from "./pages/NotFound"
-import Unauthorized from "./pages/Unauthorized"
 import Footer from "./components/Footer"
 import NavBar from "./components/NavBar"
 
@@ -20,15 +18,13 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={esLocale}>
           <CssBaseline />
-          <Router basename="/Portafolio-V2/">
+          <Router basename="/Portafolio-V2">
             <Container>
               <NavBar />
             </Container>
-            <Container style={{ padding: "24px" }}>
+            <Container style={{ padding: "20px 150px 0px" }}>
               <Routes>
                 <Route path={"/"} element={<Home />} />
-                <Route path="/unauthorized" element={<Unauthorized />} />
-                <Route path="*" element={<NotFound />} />
               </Routes>
             </Container>
             <div className="filler" />

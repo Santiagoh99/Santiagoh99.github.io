@@ -4,7 +4,6 @@ import Contacto from "../components/Contacto"
 import { Grid, Divider, Typography, Button, IconButton } from '@mui/material'
 import logo from '../img/Imagen1.jpg'
 import { GitHub, LinkedIn, WhatsApp } from '@mui/icons-material'
-import cvPdf from '../pdf/CV Santiago Herrera.pdf'
 
 const images = [
     { id: '1', url: 'https://img.icons8.com/color/98/000000/microsoft-sql-server.png' },
@@ -28,7 +27,7 @@ export default function Home() {
                     Estudio para Ingeniero en sistemas en la Universidad Abierta Interamerica, a una materia de ser Analista en sistema.
                     Dejo para que puedan ver mi CV, sobre mis datos laborales, distintos cursos y aprendizajes a lo largo de mi vida laboral.
                 </Typography>
-                <Button href={cvPdf}>
+                <Button >
                     Descargar
                 </Button>
                 <Divider style={{ margin: '1em' }} />
