@@ -1,34 +1,25 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import { ImageButton, ImageSrc, Image, ImageBackdrop, ImageMarked } from "./ImageButton"
-import { images } from '../data/image'
+import React from 'react'
+import { Grid } from '@mui/material'
 
-export default function Project() {
+
+const images = [
+  { url: 'https://img.icons8.com/color/98/000000/microsoft-sql-server.png' },
+  { url: 'https://img.icons8.com/color/96/000000/javascript--v1.png' },
+  { url: 'https://img.icons8.com/color/98/000000/html-5--v1.png' },
+  { url: 'https://img.icons8.com/color/98/000000/css3.png' },
+  { url: 'https://img.icons8.com/color/98/000000/nodejs.png' },
+  { url: 'https://img.icons8.com/color/98/react-native.png' },
+  { url: 'https://img.icons8.com/color/98/typescript.png' },
+  { url: 'https://img.icons8.com/color/98/figma.png' },
+]
+export default function Skills() {
   return (
-    <Box sx={{ display: 'flex', flexWrap: 'wrap', minWidth: 300, width: '100%' }}>
+    <Grid container spacing={1} direction="row" justifyContent="center" alignItems="center">
       {images.map((image) => (
-        <ImageButton
-          focusRipple
-          key={image.title}
-          style={{
-            width: image.width,
-          }}
-        >
-          <ImageSrc style={{ backgroundImage: `url(${image.url})`, filter: 'brightness(45%)'}} />
-          <ImageBackdrop className="MuiImageBackdrop-root" />
-          <Image>
-            <Typography
-              component="span"
-              variant="subtitle1"
-              sx={{position: 'relative', p: 4,pt: 2,pb: (theme) => `calc(${theme.spacing(1)} + 6px)`,}}
-            >
-              {image.title}
-              <ImageMarked className="MuiImageMarked-root" />
-            </Typography>
-          </Image>
-        </ImageButton>
+        <Grid item xs='auto' key={image.url}>
+          <img src={image.url} alt='logo' />
+        </Grid>
       ))}
-    </Box>
+    </Grid>
   );
 }
