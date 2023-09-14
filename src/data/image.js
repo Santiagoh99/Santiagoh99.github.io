@@ -15,7 +15,7 @@ export const images = [
     },
     {
         url: 'https://is1-ssl.mzstatic.com/image/thumb/Purple126/v4/80/f4/13/80f41357-cb12-5131-1985-19d63f40ab4d/AppIcon-0-0-1x_U007emarketing-0-0-0-10-0-0-sRGB-0-0-0-GLES2_U002c0-512MB-85-220-0-0.png/230x0w.webp',
-        title: 'Production',
+        title: 'Production Corte',
         film: tep,
         desc: 'Desarrollo de Produccion de corte de la marca Kosiuko para integrar en Microsoft GP 2018, realizado con react/node , con backend en asp.net core y SQL server',
         width: '33%',
@@ -35,7 +35,7 @@ export const images = [
     },
     {
         url: 'https://media.licdn.com/dms/image/C4E0BAQHxI_q20yKDsg/company-logo_200_200/0/1584535344147?e=1702512000&v=beta&t=Bpf3dIhSksfpUf8QqjdvegwROjy1dpcRvi4GA4MmzRw',
-        title: 'Production',
+        title: 'Production Falla',
         film: tinte,
         desc: 'Desarrollo de Produccion de fallas de la empresa FarmaGram para integrar en Microsoft GP 2016, realizado con react/node , con backend en asp.net core y SQL server',
         width: '33%',
