@@ -18,7 +18,7 @@ const App = () => {
       <ThemeProvider theme={theme}>
         <LocalizationProvider dateAdapter={AdapterDateFns} adapterLocale={esLocale}>
           <CssBaseline />
-          <Router basename="/Portafolio-V2">
+          <Router basename="/Portafolio-V2/">
             <Container>
               <NavBar />
             </Container>
