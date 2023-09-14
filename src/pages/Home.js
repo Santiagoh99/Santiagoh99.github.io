@@ -1,19 +1,20 @@
 import React from 'react'
-import Proyect from "../components/Proyect"
+import Project from "../components/Project"
 import Contacto from "../components/Contacto"
 import AboutMe from "../components/AboutMe"
-import { Grid, Divider, IconButton } from '@mui/material'
+import Skills from "../components/Skills"
+import {  Divider, IconButton } from '@mui/material'
 import { GitHub, LinkedIn, WhatsApp } from '@mui/icons-material'
 
 export default function Home() {
 
     return (
         <>
-            <Grid container direction="column" justifyContent="center" alignItems="center">
             <AboutMe />
-            </Grid>
-            <Divider style={{ margin: '2em' }}>Project</Divider>
-            <Proyect />
+            <Divider style={{ margin: '2em' }}>Skills</Divider>
+            <Skills />
+            <Divider style={{ margin: '2em' }}>Projects</Divider>
+            <Project />
             <Divider style={{ margin: '2em' }}>Contact</Divider>
             <Contacto />
             <Divider style={{ margin: '1em' }}>
