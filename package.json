@@ -1,13 +1,13 @@
 {
-  "homepage": "https://santiagoh99.github.io/Portafolio-V2/",
+  "homepage": "https://santiagoh99.github.io/Portafolio-V2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "@emailjs/browser": "^3.9.1",
-    "@emotion/react": "^11.10.4",
-    "@emotion/styled": "^11.10.4",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.10.9",
-    "@mui/material": "^5.10.10",
+    "@mui/material": "^5.14.9",
     "@mui/x-date-pickers": "^5.0.5",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -25,7 +25,7 @@
   },
   "scripts": {
     "predeploy": "npm run build",
-    "deploy":"gh-pages -d build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

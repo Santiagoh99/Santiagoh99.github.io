@@ -11,9 +11,9 @@ export default function Navbar() {
                     <BottomNavigation showLabels value={value}
                         onChange={(event, newValue) => setValue(newValue)}
                     >
-                        <BottomNavigationAction label="Sobre Mi" />
-                        <BottomNavigationAction label="Proyectos" />
-                        <BottomNavigationAction label="Contacto" />
+                        <BottomNavigationAction label="About Me" />
+                        <BottomNavigationAction label="Project" />
+                        <BottomNavigationAction label="Contact" />
                     </BottomNavigation>
                 </Box>
             </>

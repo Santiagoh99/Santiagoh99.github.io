@@ -25,29 +25,5 @@ export const theme =
                     color: "primary",
                 },
             },
-            MuiDialogTitle: {
-                styleOverrides: {
-                    root: {
-                        backgroundColor: "#833",
-                        color: "white"
-                    },
-                }
-            },
-            MuiDataGrid: {
-                styleOverrides: {
-                    root: {
-                        '& .MuiDataGrid-columnHeaders': {
-                            backgroundColor: 'black',
-                            color: "white"
-                        },
-                        '& .MuiDataGrid-iconSeparator': {
-                            display: "none"
-                        },
-                        '& .Mui-error': {
-                            backgroundColor: '#ff9191',
-                        }
-                    }
-                }
-            }
         },
     }, esES)
