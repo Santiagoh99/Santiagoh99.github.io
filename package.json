@@ -1,6 +1,6 @@
 {
-  "name": "Portafolio",
-  "homepage": "/",
+  "name": "portafolio",
+  "homepage": "https://santiagoh99.github.io/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
